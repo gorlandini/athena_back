@@ -1,0 +1,21 @@
+version: '3'
+
+networks:
+  ln:
+
+services:
+
+  postgres_athena:
+    image: postgres:16-alpine3.22
+    container_name: postgres_athena
+    restart: always
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: athena@123
+    volumes:
+      - ./postgresql/entrypoint/create-db.sql:/docker-entrypoint-initdb.d/001-create-db.sql
+      - ./postgresql/entrypoint/enable-log.sh:/docker-entrypoint-initdb.d/enable-log.sh
+    networks:
+       - ln

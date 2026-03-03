@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste de criação de projeto</title>
+
+    <!-- CSRF token do Spring Security -->
+    <meta name="_csrf" th:content="${_csrf.token}" />
+    <meta name="_csrf_header" th:content="${_csrf.headerName}" />
+</head>
+<body>
+<h1>Teste de criação de projeto</h1>
+
+<div id="userInfo">Carregando informações do usuário...</div>
+
+<label for="projectName">Nome do Projeto:</label>
+<input type="text" id="projectName" required>
+<button id="btnCreate">Criar Projeto</button>
+
+<p id="status"></p>
+
+<script>
+    const userInfo = document.getElementById('userInfo');
+    const status = document.getElementById('status');
+
+    // CSRF
+    const csrfMeta = document.querySelector('meta[name="_csrf"]');
+    const csrfHeaderMeta = document.querySelector('meta[name="_csrf_header"]');
+
+    const csrfToken = csrfMeta ? csrfMeta.content : null;
+    const csrfHeader = csrfHeaderMeta ? csrfHeaderMeta.content : null;
+
+    async function initPage() {
+        try {
+            const res = await fetch('/user', { credentials: 'include' });
+            if (!res.ok) throw new Error('Não logado');
+            const user = await res.json();
+            userInfo.innerHTML = `<p><strong>Usuário logado:</strong> ${user.name}</p>
+                                  <p><strong>Email:</strong> ${user.email}</p>`;
+        } catch (err) {
+            userInfo.innerHTML = 'Não logado. Redirecionando para login...';
+            window.location.href = '/oauth2/authorization/google';
+        }
+    }
+
+    document.getElementById('btnCreate').addEventListener('click', async () => {
+        const nomeProjeto = document.getElementById('projectName').value;
+        if (!nomeProjeto) {
+            status.textContent = '❌ Digite um nome de projeto';
+            return;
+        }
+
+        const headers = { 'Content-Type': 'application/json' };
+        if (csrfToken && csrfHeader) headers[csrfHeader] = csrfToken;
+
+        try {
+            const res = await fetch('/api/v1/projetos', {
+                method: 'POST',
+                headers,
+                credentials: 'include',
+                body: JSON.stringify({ nomeProjeto })
+            });
+            if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+            status.textContent = '✅ Projeto criado com sucesso!';
+        } catch (err) {
+            status.textContent = `❌ Erro na requisição: ${err}`;
+        }
+    });
+
+    initPage();
+</script>
+</body>
+</html>

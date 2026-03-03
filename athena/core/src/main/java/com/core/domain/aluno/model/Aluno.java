@@ -1,0 +1,51 @@
+package com.core.domain.aluno.model;
+
+import static java.util.Objects.requireNonNull;
+import static lombok.AccessLevel.*;
+
+import jakarta.persistence.AttributeOverride;
+import jakarta.persistence.Column;
+import jakarta.persistence.EmbeddedId;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+import org.hibernate.annotations.DynamicUpdate;
+
+import com.core.sk.identifiers.AlunoId;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+
+@SuppressWarnings("squid:S2160")
+
+@Getter
+@NoArgsConstructor(access = PROTECTED, force = true)
+
+@DynamicUpdate
+@Entity
+@Table(name = "aluno")
+public class Aluno {
+
+    @EmbeddedId
+    @AttributeOverride(name = AlunoId.ATTR, column = @Column(name = "id"))
+    private AlunoId id;
+
+    @Column(name = "nome")
+    private String nome;
+
+    @Column(name = "matricula")
+    private String matricula;
+
+    Aluno(AlunoBuilder builder) {
+        this.id = builder.id;
+        this.nome = requireNonNull(builder.nome);
+        this.matricula = requireNonNull(builder.matricula);
+    }
+
+    public static AlunoBuilder builder() {
+        return new AlunoBuilder();
+    }
+
+}
+

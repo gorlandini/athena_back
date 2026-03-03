@@ -1,0 +1,80 @@
+# https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html#common-application-properties
+spring:
+  application:
+    name: athena
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
+  output:
+    ansi:
+      enabled: DETECT
+  jackson:
+    time-zone: UTC
+    default-property-inclusion: non-null
+    mapper:
+      accept-case-insensitive-properties: true
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    out-of-order: true
+    ignore-migration-patterns:
+      - "*:missing"
+      - "*:future"
+    baseline-version: 1
+    locations: classpath:db/migration/v1,classpath:db/callback
+    schemas: 2A3A31B7-817B-4F20-A790-345C3A2CE6BC
+    default-schema: 2A3A31B7-817B-4F20-A790-345C3A2CE6BC
+  datasource:
+    url: jdbc:postgresql://localhost:5433/athena-db?ApplicationName=athena
+    username: postgres
+    password: athena@123
+    hikari:
+      minimum-idle: 0
+      maximum-pool-size: 18
+      idle-timeout: 100000
+      connection-timeout: 200000 
+      max-lifetime: 300000
+      transaction-isolation: TRANSACTION_READ_COMMITTED
+      auto-commit: false
+      data-source-properties:
+        useServerPrepStmts: false
+        cachePrepStmts: true
+        prepStmtCacheSize: 500
+        prepStmtCacheSqlLimit: 1024
+  jpa:
+    open-in-view: false
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+    properties:
+      hibernate:
+        default_schema: 2A3A31B7-817B-4F20-A790-345C3A2CE6BC
+        types:
+          print:
+            banner: false
+        cache:
+          '[use_second_level_cache]': false
+        connection:
+          '[provider_disables_autocommit]': true
+        jdbc:
+          '[batch_size]': 30
+          '[batch_versioned_data]': true
+          '[time_zone]': UTC
+        '[order_inserts]': true
+        '[order_updates]': true
+        query:
+          '[in_clause_parameter_padding]': true
+          '[fail_on_pagination_over_collection_fetch]': true
+          '[plan_cache_max_size]': 4096
+        session:
+          events:
+            log:
+              '[LOG_QUERIES_SLOWER_THAN_MS]': 150
+
+  data:
+    jpa:
+      repositories:
+        bootstrap-mode: lazy
+
+
