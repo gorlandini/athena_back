@@ -8,7 +8,40 @@ import org.springframework.web.cors.CorsConfiguration;
 
 import java.util.List;
 
+
+
 @Configuration
+public class SecurityConfig {
+
+    @Bean
+    SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+
+        http
+                .csrf(csrf -> csrf.disable())
+                .authorizeHttpRequests(auth -> auth
+                        .anyRequest().permitAll()
+                );
+
+        return http.build();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*@Configuration
 public class SecurityConfig {
 
     @Bean
@@ -16,7 +49,7 @@ public class SecurityConfig {
 
         http
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/teste", "/csrf-token", "/oauth2/**").permitAll()
+                        .requestMatchers("/api/**", "/csrf-token", "/oauth2/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .oauth2Login(oauth -> oauth
@@ -33,5 +66,9 @@ public class SecurityConfig {
 
         // CSRF permanece ativo (padrão)
         return http.build();
+
+
     }
-}
+
+
+} */

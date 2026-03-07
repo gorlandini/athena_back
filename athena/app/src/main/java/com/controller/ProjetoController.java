@@ -1,22 +1,16 @@
 package com.controller;
 
-import com.core.domain.aluno.usecase.RegistrarAlunoUseCase;
-import com.core.domain.aluno.usecase.RegistrarProjetoUseCase;
-import com.core.sk.identifiers.AlunoId;
+import com.core.domain.projeto.usecase.RegistrarProjetoUseCase;
 import com.core.sk.identifiers.ProjetoId;
 import com.infra.UriResponseBuilder;
-import com.query.domain.aluno.app.AlunoQueryAppService;
-import com.query.domain.aluno.projection.Aluno;
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.oauth2.core.user.OAuth2User;
-import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
-import java.util.UUID;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 import static org.springframework.web.servlet.support.ServletUriComponentsBuilder.fromCurrentRequest;

@@ -1,6 +1,5 @@
-package com.core.domain.aluno.usecase;
+package com.core.domain.projeto.usecase;
 
-import com.core.sk.identifiers.AlunoId;
 import com.core.sk.identifiers.ProjetoId;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
@@ -13,7 +12,13 @@ public interface RegistrarProjetoUseCase {
 
             @Valid
             @NotNull(message = "Nome do projeto obrigatório")
-            String nomeProjeto
+            String nomeProjeto,
+
+            @NotNull(message = "Nome do curso obrigatório")
+            String curso,
+
+            int termo
+
 
 
 

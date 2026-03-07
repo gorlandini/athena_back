@@ -77,6 +77,8 @@ spring:
       repositories:
         bootstrap-mode: lazy
 
+
+
   security:
     oauth2:
       client:

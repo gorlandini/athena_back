@@ -1,4 +1,4 @@
-package com.core.domain.aluno.model;
+package com.core.domain.projeto.model;
 
 
 
@@ -9,6 +9,8 @@ public class ProjetoBuilder {
     protected ProjetoId id;
     protected String nomeProjeto;
     protected String nomeProfessor;
+    protected int termo;
+    protected String curso;
 
     public ProjetoBuilder nomeProjeto(String nomeProjeto) {
         this.nomeProjeto = nomeProjeto;
@@ -17,6 +19,16 @@ public class ProjetoBuilder {
 
     public ProjetoBuilder nomeProf(String nomeProfessor) {
         this.nomeProfessor = nomeProfessor;
+        return this;
+    }
+
+    public ProjetoBuilder termo(int termo) {
+        this.termo = termo;
+        return this;
+    }
+
+    public ProjetoBuilder curso(String curso) {
+        this.curso = curso;
         return this;
     }
 

@@ -1,12 +1,8 @@
-package com.core.domain.aluno.app;
+package com.core.domain.projeto.app;
 
-import com.core.domain.aluno.model.Aluno;
-import com.core.domain.aluno.model.Projeto;
-import com.core.domain.aluno.repository.AlunoDomainRepository;
-import com.core.domain.aluno.repository.ProjetoDomainRepository;
-import com.core.domain.aluno.usecase.RegistrarAlunoUseCase;
-import com.core.domain.aluno.usecase.RegistrarProjetoUseCase;
-import com.core.sk.identifiers.AlunoId;
+import com.core.domain.projeto.model.Projeto;
+import com.core.domain.projeto.repository.ProjetoDomainRepository;
+import com.core.domain.projeto.usecase.RegistrarProjetoUseCase;
 import com.core.sk.identifiers.ProjetoId;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

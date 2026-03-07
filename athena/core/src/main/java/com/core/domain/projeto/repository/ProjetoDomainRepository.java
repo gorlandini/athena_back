@@ -1,7 +1,6 @@
-package com.core.domain.aluno.repository;
+package com.core.domain.projeto.repository;
 
-import com.core.domain.aluno.model.Aluno;
-import com.core.domain.aluno.model.Projeto;
+import com.core.domain.projeto.model.Projeto;
 import com.core.sk.identifiers.ProjetoId;
 import org.springframework.data.repository.Repository;
 
