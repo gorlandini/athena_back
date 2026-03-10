@@ -4,6 +4,7 @@ import com.controller.response.ApiResponse;
 import com.query.domain.curso.app.CursoQueryAppService;
 import com.query.domain.curso.model.CursoQuery;
 import com.query.domain.curso.projection.Curso;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +16,7 @@ import java.util.Map;
 
 @RequiredArgsConstructor
 
+@Tag(name = "CursoController", description = "API para gerenciar cursos")
 @RestController
 @RequestMapping("/api/v1/cursos")
 public class CursoController {

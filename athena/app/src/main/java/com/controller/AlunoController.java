@@ -6,6 +6,7 @@ import static org.springframework.web.servlet.support.ServletUriComponentsBuilde
 import java.util.Map;
 import java.util.UUID;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -28,6 +29,7 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 
+@Tag(name = "UserController", description = "API para gerenciar alunos")
 @RestController
 @RequestMapping(path = "/api/v1/alunos", produces = APPLICATION_JSON_VALUE)
 public class AlunoController {

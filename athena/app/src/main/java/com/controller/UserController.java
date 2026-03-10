@@ -1,5 +1,6 @@
 package com.controller;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.oauth2.core.user.OAuth2User;
@@ -10,6 +11,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.HashMap;
 import java.util.Map;
 
+@Tag(name = "UserController", description = "API para obter dados do usuário autenticado")
 @RestController
 public class UserController {
 

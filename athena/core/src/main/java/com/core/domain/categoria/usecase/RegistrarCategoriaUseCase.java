@@ -1,16 +1,19 @@
 package com.core.domain.categoria.usecase;
 
-import com.core.sk.identifiers.CategoriaId;
+import jakarta.persistence.Id;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 public interface RegistrarCategoriaUseCase {
 
-    CategoriaId handle(RegistrarCategoria command);
+    Long handle(RegistrarCategoria command);
+
+
 
     record RegistrarCategoria(
 
-
+            @Id
+            Long id,
 
             @Valid
             @NotNull(message = "Nome da categoria obrigatorio")

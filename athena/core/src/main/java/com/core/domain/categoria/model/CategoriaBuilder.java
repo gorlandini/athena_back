@@ -1,12 +1,9 @@
 package com.core.domain.categoria.model;
 
 
-
-import com.core.sk.identifiers.CategoriaId;
-
 public class CategoriaBuilder {
 
-    protected CategoriaId id;
+
     protected String nome;
 
     public CategoriaBuilder nome(String nome) {
@@ -17,7 +14,7 @@ public class CategoriaBuilder {
 
 
     public Categoria build() {
-        this.id = CategoriaId.generate();
+
         return new Categoria(this);
     }
 }

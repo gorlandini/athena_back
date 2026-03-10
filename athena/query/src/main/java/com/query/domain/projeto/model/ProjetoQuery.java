@@ -1,4 +1,6 @@
-package com.query.domain.categoria.model;
+package com.query.domain.projeto.model;
+
+
 
 
 import com.query.sk.AbstractAnemicEntity;
@@ -22,16 +24,27 @@ import java.util.UUID;
 
 @Immutable
 @Entity
-@Table(name = "categoria")
-public class CategoriaQuery {
+@Table(name = "projeto")
+public class ProjetoQuery {
 
     @Id
-    private Long id;
+    private UUID id;
 
-    @Column(name = "nome")
-    private String nome;
+    @Column(name = "nomeprojeto")
+    private String nomeProjeto;
+
+    @Column(name = "nomeprofessor")
+    private String nomeProfessor;
+
+    @Column(name = "termo")
+    private int termo;
+
+    @Column(name = "curso")
+    private String curso;
+
 
 
 
 }
+
 

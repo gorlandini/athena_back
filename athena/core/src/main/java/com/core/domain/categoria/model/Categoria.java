@@ -1,6 +1,5 @@
 package com.core.domain.categoria.model;
 
-import com.core.sk.identifiers.CategoriaId;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,9 +16,9 @@ import static lombok.AccessLevel.PROTECTED;
 @Table(name = "categoria")
 public class Categoria {
 
-    @EmbeddedId
-    @AttributeOverride(name = CategoriaId.ATTR, column = @Column(name = "id"))
-    private CategoriaId id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "nome")
     private String nome;
@@ -27,9 +26,17 @@ public class Categoria {
 
 
     Categoria(CategoriaBuilder builder) {
-        this.id = builder.id;
+
         this.nome = requireNonNull(builder.nome);
 
+    }
+
+    public static Categoria nova() {
+        return new Categoria();
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public static CategoriaBuilder builder() {
