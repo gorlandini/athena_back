@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b8ce3122-974d-4bb3-b155-16414a362fba" name="Changes" comment="Criada a presistencia(somente inclusao) da classe Categoria. Criado tratamento de exceções centralizado. Organizadas as classes em seus respectivos pacotes por domínio">
+      <change afterPath="$PROJECT_DIR$/athena/app/src/main/resources/templates/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/athena/core/src/main/java/com/core/domain/notification/app/NotificationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/athena/core/src/main/java/com/core/domain/notification/app/NotificationSubscriber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/athena/core/src/main/java/com/core/domain/notification/model/Notification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/athena_back.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/athena/app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/athena/app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athena/core/src/main/java/com/core/domain/projeto/app/RegistrarProjetoAppService.java" beforeDir="false" afterPath="$PROJECT_DIR$/athena/core/src/main/java/com/core/domain/projeto/app/RegistrarProjetoAppService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="brachguilherme" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;gorlandini&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/thpp/athena_back.git&quot;,
+    &quot;accountId&quot;: &quot;e2fd75c4-61b1-4177-a07d-9f978f89276d&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="3AJ25BDaZUBqtEISXXutOIh4mCC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AthenaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main-clean&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/ProjetosEstudosVagaGringa/athena_back/athena/query/src/main/java/com/query/domain/categoria&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.6310345&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\ProjetosEstudosVagaGringa\athena_back\athena\query\src\main\java\com\query\domain\categoria" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\ProjetosEstudosVagaGringa\athena_back\athena\app\src\main\resources\db\migration\v1" />
+      <recent name="C:\ProjetosEstudosVagaGringa\athena_back\athena\app\src\main\resources\templates" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.query.domain.categoria.model" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="AthenaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="ms-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.AthenaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="StructureViewState">
+    <option name="selectedTab" value="Logical" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b8ce3122-974d-4bb3-b155-16414a362fba" name="Changes" comment="" />
+      <created>1772296166273</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1772296166273</updated>
+      <workItem from="1772296167400" duration="19728000" />
+      <workItem from="1772540256822" duration="7432000" />
+      <workItem from="1772580173388" duration="10561000" />
+      <workItem from="1772840394132" duration="12629000" />
+      <workItem from="1772895958683" duration="191000" />
+      <workItem from="1772896159465" duration="619000" />
+      <workItem from="1772896790887" duration="103000" />
+      <workItem from="1772896902131" duration="126000" />
+      <workItem from="1772897061654" duration="10000" />
+    </task>
+    <task id="LOCAL-00001" summary="Já gravando os dados nomeProjeto e nomeProfessor na tabela Projetos. Todos os arquivos necessários para isso já foram criados. Foi necessária na classe Aluno e Professor, modificando o access do @NoArgsConstructor de PRIVATE para PROTECTED (mexi em alguma coisa que causou isto)">
+      <option name="closed" value="true" />
+      <created>1772309049949</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1772309049949</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Gravação de projeto só é feita agora após autenticação via Google (Oauth2).&#10;Dentro de Resources, há um template(teste.html) que nos possibilita testar o envio de dados via post ao ProjetoController sem ainda termos a camada front-end.&#10;Criada a camada config(SecurityConfig)">
+      <option name="closed" value="true" />
+      <created>1772330155487</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1772330155487</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Gravação de projeto só é feita agora após autenticação via Google (Oauth2).&#10;Dentro de Resources, há um template(teste.html) que nos possibilita testar o envio de dados via post ao ProjetoController sem ainda termos a camada front-end.&#10;Criada a camada config(SecurityConfig)">
+      <option name="closed" value="true" />
+      <created>1772330242473</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1772330242473</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Gravação de projeto só é feita agora após autenticação via Google (Oauth2).&#10;Dentro de Resources, há um template(teste.html) que nos possibilita testar o envio de dados via post ao ProjetoController sem ainda termos a camada front-end.&#10;Criada a camada config(SecurityConfig)">
+      <option name="closed" value="true" />
+      <created>1772330290070</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1772330290070</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Gravação de projeto só é feita agora após autenticação via Google (Oauth2).&#10;Dentro de Resources, há um template(teste.html) que nos possibilita testar o envio de dados via post ao ProjetoController sem ainda termos a camada front-end.&#10;Criada a camada config(SecurityConfig)">
+      <option name="closed" value="true" />
+      <created>1772330371882</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1772330371882</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Gravação de projeto só é feita agora após autenticação via Google (Oauth2).&#10;Dentro de Resources, há um template(teste.html) que nos possibilita testar o envio de dados via post ao ProjetoController sem ainda termos a camada front-end.&#10;Criada a camada config(SecurityConfig). Não subi o application.yml pois o git não permite o upload de chaves de api">
+      <option name="closed" value="true" />
+      <created>1772540390433</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1772540390433</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Gravação de projeto só é feita agora após autenticação via Google (Oauth2).&#10;Dentro de Resources, há um template(teste.html) que nos possibilita testar o envio de dados via post ao ProjetoController sem ainda termos a camada front-end.&#10;Criada a camada config(SecurityConfig). Não subi o application.yml pois o git não permite o upload de chaves de api">
+      <option name="closed" value="true" />
+      <created>1772540590589</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1772540590589</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Gravação de projeto só é feita agora após autenticação via Google (Oauth2).&#10;Dentro de Resources, há um template(teste.html) que nos possibilita testar o envio de dados via post ao ProjetoController sem ainda termos a camada front-end.&#10;Criada a camada config(SecurityConfig). Não subi o application.yml pois o git não permite o upload de chaves de api">
+      <option name="closed" value="true" />
+      <created>1772540639698</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1772540639698</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Gravação de projeto só é feita agora após autenticação via Google (Oauth2).&#10;Dentro de Resources, há um template(teste.html) que nos possibilita testar o envio de dados via post ao ProjetoController sem ainda termos a camada front-end.&#10;Criada a camada config(SecurityConfig). Não subi o application.yml pois o git não permite o upload de chaves de api">
+      <option name="closed" value="true" />
+      <created>1772541226470</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1772541226470</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Gravação de projeto só é feita agora após autenticação via Google (Oauth2).&#10;Dentro de Resources, há um template(teste.html) que nos possibilita testar o envio de dados via post ao ProjetoController sem ainda termos a camada front-end.&#10;Criada a camada config(SecurityConfig). Não subi o application.yml pois o git não permite o upload de chaves de api">
+      <option name="closed" value="true" />
+      <created>1772542199814</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1772542199814</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Criada variável de ambiente para credenciais google&#10;Criado pacote para tratamento de exceções e resposta padronizada de api&#10;criada api para listar os cursos (obs: não foi criado use case pois não haverá operações crud para a entidade cursos">
+      <option name="closed" value="true" />
+      <created>1772642509796</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1772642509797</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Criada a presistencia(somente inclusao) da classe Categoria. Criado tratamento de exceções centralizado. Organizadas as classes em seus respectivos pacotes por domínio">
+      <option name="closed" value="true" />
+      <created>1772892649600</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1772892649600</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Criada a presistencia(somente inclusao) da classe Categoria. Criado tratamento de exceções centralizado. Organizadas as classes em seus respectivos pacotes por domínio">
+      <option name="closed" value="true" />
+      <created>1772892680832</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1772892680832</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Já gravando os dados nomeProjeto e nomeProfessor na tabela Projetos. Todos os arquivos necessários para isso já foram criados. Foi necessária na classe Aluno e Professor, modificando o access do @NoArgsConstructor de PRIVATE para PROTECTED (mexi em alguma coisa que causou isto)" />
+    <MESSAGE value="Gravação de projeto só é feita agora após autenticação via Google (Oauth2).&#10;Dentro de Resources, há um template(teste.html) que nos possibilita testar o envio de dados via post ao ProjetoController sem ainda termos a camada front-end.&#10;Criada a camada config(SecurityConfig)" />
+    <MESSAGE value="Gravação de projeto só é feita agora após autenticação via Google (Oauth2).&#10;Dentro de Resources, há um template(teste.html) que nos possibilita testar o envio de dados via post ao ProjetoController sem ainda termos a camada front-end.&#10;Criada a camada config(SecurityConfig). Não subi o application.yml pois o git não permite o upload de chaves de api" />
+    <MESSAGE value="Criada variável de ambiente para credenciais google&#10;Criado pacote para tratamento de exceções e resposta padronizada de api&#10;criada api para listar os cursos (obs: não foi criado use case pois não haverá operações crud para a entidade cursos" />
+    <MESSAGE value="Criada a presistencia(somente inclusao) da classe Categoria. Criado tratamento de exceções centralizado. Organizadas as classes em seus respectivos pacotes por domínio" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criada a presistencia(somente inclusao) da classe Categoria. Criado tratamento de exceções centralizado. Organizadas as classes em seus respectivos pacotes por domínio" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/athena/core/src/main/java/com/core/domain/projeto/app/RegistrarProjetoAppService.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/athena/app/src/main/java/com/controller/AlunoController.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/athena/app/src/main/java/com/controller/ProjetoController.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
