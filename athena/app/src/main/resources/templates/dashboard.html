@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+
+<h1>Notificações</h1>
+
+<ul>
+    <li th:each="notification : ${notifications}">
+        <span th:text="${notification.message}"></span>
+    </li>
+</ul>
+
+</body>
+</html>

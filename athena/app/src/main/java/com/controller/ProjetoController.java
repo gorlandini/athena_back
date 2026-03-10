@@ -26,12 +26,13 @@ public class ProjetoController {
     public ResponseEntity<Void> registrar(@RequestBody RegistrarProjetoUseCase.RegistrarProjeto cmd, Authentication authentication) {
 
 
-        OAuth2User user = (OAuth2User) authentication.getPrincipal();
+      //  OAuth2User user = (OAuth2User) authentication.getPrincipal();
 
-        Map<String, Object> attrs = user.getAttributes();
+     //   Map<String, Object> attrs = user.getAttributes();
 
 
-        String professor = (String) user.getAttributes().get("name");
+      //  String professor = (String) user.getAttributes().get("name");
+        String professor = "Teste";
 
         ProjetoId id = registrarProjetoAppService.handle(cmd, professor);
 

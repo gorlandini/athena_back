@@ -17,7 +17,10 @@ public interface RegistrarProjetoUseCase {
             @NotNull(message = "Nome do curso obrigatório")
             String curso,
 
-            int termo
+            int termo,
+
+            @NotNull(message = "Nome do professor obrigatório")
+            String nomeProfessor
 
 
 

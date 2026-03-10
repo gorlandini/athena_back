@@ -79,6 +79,27 @@ spring:
 
 
 
+
+
+
+  cloud:
+    gcp:
+      project-id: athena-488820
+      credentials:
+        location: file:C:/ChaveGPC/key.json
+
+  management:
+    health:
+      gcpdatastore:
+        enabled: false
+
+  logging:
+    level:
+      org.springframework.web: DEBUG
+      com.google.cloud.datastore: DEBUG
+      com.google.api.gax.rpc: DEBUG
+
+
   security:
     oauth2:
       client:
@@ -92,3 +113,4 @@ spring:
         provider:
           google:
             user-name-attribute: sub
+

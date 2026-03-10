@@ -13,6 +13,16 @@
     <artifactId>app.athena</artifactId>
     <packaging>jar</packaging>
 
+
+
+
+
+
+
+
+
+
+
     <dependencies>
 
         <!-- Dependência interna -->
@@ -50,19 +60,15 @@
         <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-core</artifactId>
-            <version>12.0.2</version>
-            <scope>compile</scope>
+            <version>9.22.1</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.flywaydb</groupId>
-            <artifactId>flyway-database-postgresql</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-flyway</artifactId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -79,6 +85,9 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+
+
+
 
         <!-- Test -->
         <dependency>
