@@ -19,6 +19,14 @@ public class AlunoBuilder {
     }
 
     public Aluno build() {
+        if (this.nome == null || this.nome.isBlank()) {
+            throw new IllegalArgumentException("nome não pode ser vazio");
+        }
+
+        if (this.matricula == null || this.matricula.isBlank()) {
+            throw new IllegalArgumentException("matricula não pode ser vazia");
+        }
+
         this.id = AlunoId.generate();
         return new Aluno(this);
     }

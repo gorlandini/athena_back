@@ -24,7 +24,7 @@ public class RegistrarCategoriaAppService implements RegistrarCategoriaUseCase {
                 .orElseGet(Categoria::nova);
 
 
-        categoria.setNome(command.nome());
+        categoria.alterarNome(command.nome());
         return repository.save(categoria).getId();
     }
 

@@ -38,9 +38,12 @@ public class Aluno {
     private String matricula;
 
     Aluno(AlunoBuilder builder) {
+        System.out.println("CHEGOU NA ENTITY");
+        requireNonNull(builder, "builder não pode ser nulo");
+
         this.id = builder.id;
-        this.nome = requireNonNull(builder.nome);
-        this.matricula = requireNonNull(builder.matricula);
+        this.nome = builder.nome;
+        this.matricula = builder.matricula;
     }
 
     public static AlunoBuilder builder() {
@@ -48,6 +51,11 @@ public class Aluno {
     }
 
     public void alterarNome(String nome) {
+        if (nome == null || nome.isBlank()) {
+            throw new IllegalArgumentException("nome inválido");
+        }
+
+
         this.nome = requireNonNull(nome);
     }
 

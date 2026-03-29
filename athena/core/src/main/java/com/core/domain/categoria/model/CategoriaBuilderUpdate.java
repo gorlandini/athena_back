@@ -15,7 +15,7 @@ public class CategoriaBuilderUpdate {
 
     public void apply(Categoria categoria) {
         if (this.nome != null) {
-            categoria.setNome(this.nome);
+            categoria.alterarNome(this.nome);
         }
     }
 

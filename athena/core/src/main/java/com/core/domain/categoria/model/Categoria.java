@@ -35,8 +35,8 @@ public class Categoria {
         return new Categoria();
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void alterarNome(String nome) {
+        this.nome = requireNonNull(nome);
     }
 
     public static CategoriaBuilder builder() {
