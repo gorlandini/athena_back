@@ -2,7 +2,6 @@ package com.controller;
 
 import com.controller.response.ApiResponse;
 import com.query.domain.curso.app.CursoQueryAppService;
-import com.query.domain.curso.model.CursoQuery;
 import com.query.domain.curso.projection.Curso;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Map;
 
 @RequiredArgsConstructor
 

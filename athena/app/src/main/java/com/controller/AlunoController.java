@@ -6,17 +6,18 @@ import static org.springframework.web.servlet.support.ServletUriComponentsBuilde
 import java.util.Map;
 import java.util.UUID;
 
+import com.core.domain.aluno.model.AlunoBuilderUpdate;
+import com.core.domain.aluno.usecase.AtualizarAlunoUseCase;
+import com.core.domain.aluno.usecase.ExcluirAlunoUseCase;
+import com.core.domain.projeto.usecase.AtualizarProjetoUseCase;
+import com.core.domain.projeto.usecase.ExcluirProjetoUseCase;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.core.user.OAuth2User;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.core.domain.aluno.usecase.RegistrarAlunoUseCase;
 import com.infra.UriResponseBuilder;
@@ -36,6 +37,8 @@ public class AlunoController {
 
     private final RegistrarAlunoUseCase registrarAlunoAppService;
     private final AlunoQueryAppService alunoQueryAppService;
+    private final ExcluirAlunoUseCase excluirAlunoAppService;
+    private final AtualizarAlunoUseCase atualizarAlunoAppService;
 
     @PostMapping(consumes = APPLICATION_JSON_VALUE)
     public ResponseEntity<Void> registrar(@RequestBody RegistrarAlunoUseCase.RegistrarAluno cmd) {
@@ -53,6 +56,32 @@ public class AlunoController {
     public Aluno buscaPorId(@PathVariable UUID id) {
         return alunoQueryAppService.recuperarProduto(id);
     }
+
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> excluir(@PathVariable @Valid UUID id) {
+        ExcluirAlunoUseCase.ExcluirAluno command =
+                new ExcluirAlunoUseCase.ExcluirAluno(id);
+
+
+        excluirAlunoAppService.excluir(command);
+        return ResponseEntity.noContent().build();
+    }
+
+
+    @PutMapping("/{id}")
+    public void atualizar(
+            @PathVariable UUID id,
+            @RequestBody AtualizarAlunoUseCase.AtualizarAluno command
+    ) {
+        atualizarAlunoAppService.handle(id, command);
+    }
+
+
+
+
+
+
 
     @GetMapping("/")
     public String home() {

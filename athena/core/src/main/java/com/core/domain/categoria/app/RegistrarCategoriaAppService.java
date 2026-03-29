@@ -2,7 +2,6 @@ package com.core.domain.categoria.app;
 
 
 
-import com.core.domain.aluno.model.Aluno;
 import com.core.domain.categoria.model.Categoria;
 import com.core.domain.categoria.repository.CategoriaDomainRepository;
 import com.core.domain.categoria.usecase.RegistrarCategoriaUseCase;

@@ -7,6 +7,7 @@ import java.io.Serial;
 import java.io.Serializable;
 import java.util.UUID;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import jakarta.persistence.Embeddable;
 
 import com.core.sk.context.SimpleValueObject;
@@ -48,5 +49,11 @@ public class ProjetoId extends SimpleValueObject<UUID> implements Serializable {
     public UUID getValue() {
         return value;
     }
+
+    @JsonCreator
+    public ProjetoId(String value) {
+        this.value = UUID.fromString(value);
+    }
+
 
 }

@@ -1,6 +1,5 @@
 package com;
 
-import com.google.cloud.spring.autoconfigure.datastore.GcpDatastoreAutoConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication(
 
 ) // desativa todo o Datastore
+
 public class AthenaApplication {
 
 

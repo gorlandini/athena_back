@@ -6,6 +6,7 @@ import java.io.Serial;
 import java.io.Serializable;
 import java.util.UUID;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import jakarta.persistence.Embeddable;
 
 import com.core.sk.context.SimpleValueObject;
@@ -47,5 +48,15 @@ public class AlunoId extends SimpleValueObject<UUID> implements Serializable {
     public UUID getValue() {
         return value;
     }
+
+
+    @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
+    public static AlunoId from(String value) {
+        return new AlunoId(UUID.fromString(value));
+    }
+
+
+
+
 
 }

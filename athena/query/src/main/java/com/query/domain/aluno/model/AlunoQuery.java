@@ -1,6 +1,5 @@
 package com.query.domain.aluno.model;
 
-import java.io.Serial;
 import java.util.UUID;
 
 import jakarta.persistence.Column;

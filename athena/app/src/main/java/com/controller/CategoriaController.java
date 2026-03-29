@@ -5,13 +5,10 @@ package com.controller;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 import static org.springframework.web.servlet.support.ServletUriComponentsBuilder.fromCurrentRequest;
 
-import java.util.UUID;
-
 import com.core.domain.categoria.usecase.ExcluirCategoriaUseCase;
 import com.core.domain.categoria.usecase.RegistrarCategoriaUseCase;
 import com.query.domain.categoria.app.CategoriaQueryAppService;
 import com.query.domain.categoria.model.CategoriaQuery;
-import com.query.domain.categoria.projection.Categoria;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

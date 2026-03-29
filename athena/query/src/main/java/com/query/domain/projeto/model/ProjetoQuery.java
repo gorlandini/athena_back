@@ -3,7 +3,6 @@ package com.query.domain.projeto.model;
 
 
 
-import com.query.sk.AbstractAnemicEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

@@ -1,7 +1,6 @@
 package com.query.domain.categoria.model;
 
 
-import com.query.sk.AbstractAnemicEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -11,8 +10,6 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Immutable;
-
-import java.util.UUID;
 
 
 @Getter

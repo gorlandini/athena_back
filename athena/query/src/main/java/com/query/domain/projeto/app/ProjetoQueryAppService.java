@@ -1,6 +1,5 @@
 package com.query.domain.projeto.app;
 
-import com.query.domain.categoria.model.CategoriaQuery;
 import com.query.domain.projeto.model.ProjetoQuery;
 import com.query.domain.projeto.repository.ProjetoQueryRepository;
 import lombok.RequiredArgsConstructor;

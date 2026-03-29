@@ -47,5 +47,27 @@ public class Aluno {
         return new AlunoBuilder();
     }
 
+    public void alterarNome(String nome) {
+        this.nome = requireNonNull(nome);
+    }
+
+    public void alterarMatricula(String matricula) {
+        this.matricula = requireNonNull(matricula);
+    }
+
+    public void apply(AlunoBuilderUpdate builder) {
+        requireNonNull(builder);
+
+        if (builder.nome != null) {
+            alterarNome(builder.nome);
+        }
+
+        if (builder.matricula != null) {
+            alterarMatricula(builder.matricula);
+        }
+    }
+
+
+
 }
 

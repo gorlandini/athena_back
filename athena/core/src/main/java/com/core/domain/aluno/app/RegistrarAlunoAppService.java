@@ -20,14 +20,14 @@ public class RegistrarAlunoAppService implements RegistrarAlunoUseCase {
     @Override
     public AlunoId handle(RegistrarAluno command) {
 
-        Aluno produto = Aluno.builder()
+        Aluno aluno = Aluno.builder()
             .nome(command.nome())
             .matricula(command.matricula())
             .build();
 
-        repository.save(produto);
+        repository.save(aluno);
 
-        return produto.getId();
+        return aluno.getId();
     }
 
 }
