@@ -1,49 +1,51 @@
-# 🎓 Athena Acadêmico - Projeto Integrador
+# 🎓 Athena Academic - Integrated Project Manager
 
-![Athena](https://img.shields.io/badge/Athena-Acadêmico-blue?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Ativo-brightgreen?style=for-the-badge)
+![Athena](https://img.shields.io/badge/Athena-Academic-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
-## 📖 Descrição
+## 📖 Description
 
-**Athena Acadêmico** é um sistema integrador de projetos desenvolvido para gerenciar e acompanhar projetos acadêmicos. O sistema oferece uma plataforma centralizada para visualização, cadastro e gestão de projetos de diferentes cursos e semestres.
+**Athena Academic** is an integrated project management system developed to manage and track academic projects. The system offers a centralized platform for viewing, registering, and managing projects from different courses and semesters.
 
----
-
-## ✨ Características Principais
-
-- 📊 **Dashboard Intuitivo** - Visualização rápida de todos os projetos
-- 📝 **Cadastro de Projetos** - Adicione novos projetos com facilidade
-- 👥 **Gerenciamento de Alunos** - Controle de participantes e grupos
-- 🎯 **Categorização** - Organize projetos por curso e categoria
-- 📈 **Rastreamento de Progresso** - Acompanhe o status de cada projeto
-- ⚙️ **Configurações** - Personalização do sistema
-- 🔍 **Filtros e Busca** - Encontre projetos rapidamente
-- 📱 **Interface Responsiva** - Acesso em desktop e mobile
+![Athena Academic Dashboard](https://github.com/gorlandini/athena_back/blob/main/docs/athena-dashboard.png?raw=true)
 
 ---
 
-## 🛠️ Tecnologias
+## ✨ Key Features
+
+- 📊 **Intuitive Dashboard** - Quick visualization of all projects
+- 📝 **Project Registration** - Add new projects with ease
+- 👥 **Student Management** - Control participants and groups
+- 🎯 **Project Categorization** - Organize projects by course and category
+- 📈 **Progress Tracking** - Monitor the status of each project
+- ⚙️ **Settings** - System customization
+- 🔍 **Filters & Search** - Find projects quickly
+- 📱 **Responsive Interface** - Access on desktop and mobile
+
+---
+
+## 🛠️ Technologies
 
 - **Frontend:** HTML5, CSS3, JavaScript (ES6+)
 - **Backend:** Java/Spring Boot
-- **Banco de Dados:** PostgreSQL / MySQL
-- **Servidor:** Apache Tomcat
-- **Versionamento:** Git & GitHub
+- **Database:** PostgreSQL / MySQL
+- **Server:** Apache Tomcat
+- **Version Control:** Git & GitHub
 
 ---
 
-## 📦 Instalação
+## 📦 Installation
 
-### Pré-requisitos
-- Java 11+ instalado
+### Prerequisites
+- Java 11+ installed
 - Maven 3.6+
-- PostgreSQL/MySQL configurado
+- PostgreSQL/MySQL configured
 - Git
 
-### Passos
+### Steps
 
-1. **Clone o repositório**
+1. **Clone the repository**
 ```bash
 git clone https://github.com/gorlandini/athena_back.git
 cd athena_back
